@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="drawer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="224.0" spacing="5.0" stylesheets="@../StyleSheet/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton id="drawer_btn" fx:id="inventory_btn" accessibleText="inv_btn" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="66.0" prefWidth="224.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Check Inventory" textFill="#0b0b0b">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="69.0" fitWidth="67.0" pickOnBounds="true" translateX="-5.0">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@../Images/inventory.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <JFXButton id="drawer_btn" fx:id="chk_emp" accessibleText="emp_btn" nodeOrientation="LEFT_TO_RIGHT" prefHeight="66.0" prefWidth="224.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Employee List" textFill="#0b0b0b">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="69.0" fitWidth="67.0" pickOnBounds="true" translateX="-15.0">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@../Images/employee.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <JFXButton id="drawer_btn" fx:id="crt_inv_btn" accessibleText="crt_btn" nodeOrientation="LEFT_TO_RIGHT" prefHeight="66.0" prefWidth="224.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Create Inventory" textFill="#0b0b0b">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="67.0" fitWidth="69.0" pickOnBounds="true" translateX="-5.0">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@../Images/create_inventory.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <JFXButton id="drawer_btn" fx:id="edit_inv_btn" accessibleText="edit_btn" nodeOrientation="LEFT_TO_RIGHT" prefHeight="66.0" prefWidth="224.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Edit Inventory" textFill="#0b0b0b">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="69.0" fitWidth="67.0" pickOnBounds="true" translateX="-15.0">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@../Images/edit_inventory.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <JFXButton id="drawer_btn" fx:id="chk_cus_btn" accessibleText="cus_btn" prefHeight="66.0" prefWidth="224.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Customer List" textFill="#0b0b0b">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="69.0" fitWidth="67.0" pickOnBounds="true" translateX="-15.0">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@../Images/customer.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <JFXButton id="drawer_btn" fx:id="chksales_btn" accessibleText="sales_btn" nodeOrientation="LEFT_TO_RIGHT" prefHeight="66.0" prefWidth="224.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Check Sales" textFill="#0b0b0b">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="69.0" fitWidth="67.0" pickOnBounds="true" translateX="-15.0">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@../Images/Sales.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <JFXButton id="drawer_btn" fx:id="bill_btn" accessibleText="bill_btn" nodeOrientation="LEFT_TO_RIGHT" prefHeight="66.0" prefWidth="224.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Bill Generation " textFill="#0b0b0b">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="67.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@../Images/reciept.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <JFXButton id="drawer_btn" accessibleText="logout_btn" alignment="CENTER" prefHeight="66.0" prefWidth="224.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Log out">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" translateX="-30.0">
+               <image>
+                  <Image url="@../Images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</VBox>

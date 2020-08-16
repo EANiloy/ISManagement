@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Splash" prefHeight="500.0" prefWidth="700.0" stylesheets="@../StyleSheet/Style.css" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assets.Codes.Splash">
+   <children>
+      <Label id="Splash_name" fx:id="Splash_name" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="209.0" layoutY="181.0" prefHeight="33.0" prefWidth="294.0" stylesheets="@../StyleSheet/Style.css" text="United Sells and Service Center" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="20.0" />
+         </font>
+      </Label>
+      <Label id="Splash_logo" fx:id="Splash_logo" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="312.0" layoutY="86.0" prefHeight="77.0" prefWidth="76.0" stylesheets="@../StyleSheet/Style.css" textFill="#8328ea" AnchorPane.bottomAnchor="337.0" AnchorPane.leftAnchor="312.0" AnchorPane.rightAnchor="312.0" AnchorPane.topAnchor="86.0">
+         <font>
+            <Font name="Microsoft JhengHei" size="28.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="52.0" fitWidth="54.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/register.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Pane fx:id="Loading_pane" layoutX="228.0" layoutY="299.0" prefHeight="146.0" prefWidth="244.0">
+         <children>
+            <JFXSpinner fx:id="Splash_spinner" focusTraversable="false" layoutX="101.0" layoutY="56.0" prefHeight="34.0" prefWidth="44.0" radius="50.0" />
+            <Label fx:id="Splash_info" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutY="123.0" prefHeight="18.0" prefWidth="245.0" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="14.0" />
+               </font></Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Root_Pane" depthTest="DISABLE" maxHeight="750.0" maxWidth="700.0" prefHeight="750.0" prefWidth="1400.0" stylesheets="@../StyleSheet/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assets.Codes.Report">
+    <children>
+        <AnchorPane id="Title_bar" fx:id="Drag_handle" layoutY="2.0" onMouseDragged="#Drag" onMousePressed="#Pressed" onMouseReleased="#Released" prefHeight="12.0" prefWidth="1011.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox id="hbox_control" alignment="TOP_CENTER" layoutX="915.0" layoutY="5.0" prefHeight="22.0" prefWidth="96.0" spacing="10.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                    <children>
+                        <Circle id="minimize_btn" fx:id="minimize_btn" accessibleRole="BUTTON" fill="DODGERBLUE" onMouseClicked="#Minimize" radius="9.0" stroke="#b5b5b500" strokeType="INSIDE">
+                            <effect>
+                                <GaussianBlur radius="1.5" />
+                            </effect>
+                        </Circle>
+                        <Circle id="maximize_btn" fx:id="maximize_btn" accessibleRole="BUTTON" fill="#5cff1f" onMouseClicked="#Maximize" radius="9.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                            <effect>
+                                <GaussianBlur radius="1.5" />
+                            </effect>
+                        </Circle>
+                        <Circle id="exit_btn" fx:id="exit_btn" accessibleRole="BUTTON" fill="#ff1f1f" onMouseClicked="#Close" radius="9.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                            <effect>
+                                <GaussianBlur radius="1.5" />
+                            </effect>
+                        </Circle>
+                    </children>
+                </HBox>
+                <Label layoutX="8.0" text="Report Generation" textFill="WHITE" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font name="Microsoft JhengHei Bold" size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <JFXHamburger id="Hamburger" fx:id="nav_burg" layoutX="647.0" layoutY="28.0" prefHeight="42.0" prefWidth="42.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="14.6" AnchorPane.topAnchor="40.0" />
+        <Pane id="Clock" fx:id="clock" onMouseClicked="#LoadClock" prefHeight="52.0" prefWidth="200.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="33.0">
+            <children>
+                <Label fx:id="Date" alignment="CENTER" prefHeight="30.0" prefWidth="200.0" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="clock_label1" layoutY="32.0" prefHeight="3.0" prefWidth="200.0" text="                 Day                             Month                                   Year    " textFill="#c2c2c2">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="6.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane id="Clock" fx:id="date" layoutX="448.0" layoutY="35.0" onMouseClicked="#LoadDate" prefHeight="52.0" prefWidth="200.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="33.0">
+            <children>
+                <Label fx:id="Clock_time" alignment="CENTER" layoutX="-6.0" layoutY="-1.0" prefHeight="30.0" prefWidth="200.0" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="clock_label" layoutY="32.0" prefHeight="3.0" prefWidth="200.0" text="            Day                  Hours              Minutes            Seconds" textFill="#c2c2c2">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="6.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Separator focusTraversable="false" layoutX="179.0" layoutY="725.0" prefHeight="0.0" prefWidth="558.0" AnchorPane.bottomAnchor="21.799999999999955" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="163.0" />
+        <Pane fx:id="back_btn" layoutX="10.0" layoutY="40.0" onMouseClicked="#Go_back" prefHeight="42.0" prefWidth="42.0">
+            <children>
+                <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/back.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+      <AnchorPane id="Inventory_background" layoutX="8.0" layoutY="114.0" prefHeight="593.0" prefWidth="704.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.bottomAnchor="42.39999999999998" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <TableView id="table_view" fx:id="Report_table" fixedCellSize="0.0" focusTraversable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="593.6" prefWidth="680.0" stylesheets="@../StyleSheet/Style.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="sl_col" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Sl" />
+                  <TableColumn id="table_column" fx:id="name_col" editable="false" maxWidth="400.0" minWidth="400.0" prefWidth="400.0" text="Name" />
+                  <TableColumn fx:id="amount_col" editable="false" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" text="Total Bought Amount" />
+                  <TableColumn fx:id="percentage_col" editable="false" maxWidth="1000.0" minWidth="100.0" prefWidth="100.0" text="Percentage" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+        <JFXDrawer id="drawer_pane" fx:id="draw" defaultDrawerSize="200.0" direction="RIGHT" layoutX="460.0" layoutY="70.0" prefHeight="645.0" prefWidth="224.0" resizeContent="true" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+    </children>
+    <effect>
+        <Blend mode="SOFT_LIGHT" opacity="0.14">
+            <topInput>
+                <BoxBlur iterations="3" />
+            </topInput>
+        </Blend>
+    </effect>
+</AnchorPane>

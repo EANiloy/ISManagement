@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="USSC.jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/USSC_jar</output-path>
+    <root id="archive" name="Inventory and Sales Management System.jar">
+      <element id="module-output" name="Inventory and Sales Management System" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/Assets/Jfoenix/jfoenix-9.0.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

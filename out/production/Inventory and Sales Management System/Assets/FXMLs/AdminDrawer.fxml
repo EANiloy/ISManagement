@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="drawer" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="224.0" spacing="5.0" stylesheets="@../StyleSheet/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="91.0" fitWidth="224.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Images/drawer.jpg" />
+         </image>
+      </ImageView>
+      <ProgressBar prefHeight="3.0" prefWidth="224.0" VBox.vgrow="NEVER" />
+      <Label fx:id="welcome_text" accessibleText="welcome_text" alignment="TOP_CENTER" prefHeight="31.0" prefWidth="224.0" stylesheets="@../StyleSheet/Style.css" text="Welcome" wrapText="true" VBox.vgrow="NEVER">
+         <font>
+            <Font name="Microsoft JhengHei" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+      <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="224.0" stylesheets="@../StyleSheet/Style.css" VBox.vgrow="NEVER">
+         <font>
+            <Font name="Microsoft JhengHei" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton id="drawer_btn" accessibleText="chk_attendance" graphicTextGap="20.0" prefHeight="50.0" prefWidth="224.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Check My Attendance">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" translateX="5.0">
+               <image>
+                  <Image url="@../Images/attendance.png" />
+               </image></ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton id="drawer_btn" accessibleText="create_user" alignment="TOP_LEFT" graphicTextGap="11.0" prefHeight="50.0" prefWidth="224.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Create User">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" translateX="-2.0">
+               <image>
+                  <Image url="@../Images/newuser.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton id="drawer_btn" accessibleText="change_password" alignment="TOP_LEFT" graphicTextGap="14.0" prefHeight="50.0" prefWidth="224.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Change Password">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/password.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton id="drawer_btn" accessibleText="logout_btn" alignment="TOP_LEFT" graphicTextGap="27.0" prefHeight="50.0" prefWidth="224.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Log out">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" translateX="5.0">
+               <image>
+                  <Image url="@../Images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</VBox>

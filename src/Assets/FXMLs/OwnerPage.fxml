@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Root_Pane" depthTest="DISABLE" maxHeight="750.0" maxWidth="900.0" prefHeight="750.0" prefWidth="700.0" stylesheets="@../StyleSheet/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assets.Codes.OwnerPage">
+    <children>
+        <AnchorPane id="Title_bar" fx:id="Drag_handle" layoutY="2.0" onMouseDragged="#Drag" onMousePressed="#Pressed" onMouseReleased="#Released" prefHeight="12.0" prefWidth="1011.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox id="hbox_control" alignment="TOP_CENTER" layoutX="915.0" layoutY="5.0" prefHeight="22.0" prefWidth="96.0" spacing="10.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                    <children>
+                        <Circle id="minimize_btn" fx:id="minimize_btn" accessibleRole="BUTTON" fill="DODGERBLUE" onMouseClicked="#Minimize" radius="9.0" stroke="#b5b5b500" strokeType="INSIDE">
+                            <effect>
+                                <GaussianBlur radius="1.5" />
+                            </effect>
+                        </Circle>
+                        <Circle id="maximize_btn" fx:id="maximize_btn" accessibleRole="BUTTON" fill="#5cff1f" onMouseClicked="#Maximize" radius="9.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                            <effect>
+                                <GaussianBlur radius="1.5" />
+                            </effect>
+                        </Circle>
+                        <Circle id="exit_btn" fx:id="exit_btn" accessibleRole="BUTTON" fill="#ff1f1f" onMouseClicked="#Close" radius="9.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                            <effect>
+                                <GaussianBlur radius="1.5" />
+                            </effect>
+                        </Circle>
+                    </children>
+                </HBox>
+                <Label layoutX="8.0" text="Owner Page" textFill="WHITE" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font name="Microsoft JhengHei Bold" size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+      <GridPane id="Owner_grid" fx:id="Owner_grid" alignment="CENTER" layoutX="136.0" layoutY="75.0" prefHeight="642.0" prefWidth="628.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="75.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="288.0000061035156" minHeight="10.0" prefHeight="163.1999938964844" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="440.00000610351566" minHeight="10.0" prefHeight="172.8000061035156" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="319.20001831054685" minHeight="10.0" prefHeight="159.99998779296874" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="146.39999999999998" minHeight="10.0" prefHeight="146.39999999999998" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton id="main_btn" fx:id="bill_btn" buttonType="RAISED" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" onAction="#CreateBill" prefHeight="119.0" prefWidth="280.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Bill Generation " textFill="#0b0b0b" translateX="-20.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="Microsoft JhengHei" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" translateX="5.0">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../Images/reciept.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="report_btn" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" onAction="#CheckReport" prefHeight="119.0" prefWidth="280.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Generate Report" textFill="#0b0b0b" translateX="20.0" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="Microsoft JhengHei" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="95.0" pickOnBounds="true" translateX="-5.0">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../Images/Report.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="chksales_btn" buttonType="RAISED" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" onAction="#CheckSales" prefHeight="38.0" prefWidth="280.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Check Sales" textFill="#0b0b0b" translateX="-20.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="Microsoft JhengHei" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="95.0" pickOnBounds="true" translateX="5.0">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../Images/Sales.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="chk_cus_btn" buttonType="RAISED" onAction="#CheckCustomer" prefHeight="100.0" prefWidth="280.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Customer List" textFill="#0b0b0b" translateX="20.0" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="Microsoft JhengHei" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="95.0" pickOnBounds="true" translateX="-5.0">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../Images/customer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="edit_inv_btn" buttonType="RAISED" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" onAction="#Edit_inventory" prefHeight="106.0" prefWidth="280.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Edit Inventory" textFill="#0b0b0b" translateX="-20.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="Microsoft JhengHei" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="91.0" fitWidth="87.0" pickOnBounds="true" translateX="5.0">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../Images/edit_inventory.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="crt_inv_btn" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" onAction="#CreateInventory" prefHeight="38.0" prefWidth="280.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Create Inventory" textFill="#0b0b0b" translateX="20.0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="Microsoft JhengHei" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="93.0" fitWidth="110.0" pickOnBounds="true" translateX="-5.0">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../Images/create_inventory.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="chk_emp" buttonType="RAISED" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" onAction="#CheckEmployee" prefHeight="110.0" prefWidth="280.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Employee List" textFill="#0b0b0b" translateX="-20.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="Microsoft JhengHei" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="89.0" pickOnBounds="true" translateX="5.0">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../Images/employee.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="inventory_btn" buttonType="RAISED" nodeOrientation="LEFT_TO_RIGHT" onAction="#Inventory" prefHeight="38.0" prefWidth="280.0" ripplerFill="#dfd9d9" stylesheets="@../StyleSheet/Style.css" text="Check Inventory" textFill="#0b0b0b" translateX="20.0" GridPane.halignment="LEFT" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="Microsoft JhengHei" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="84.0" fitWidth="84.0" pickOnBounds="true" translateX="-5.0">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../Images/inventory.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </GridPane>
+        <Pane id="Clock" fx:id="clock" onMouseClicked="#LoadClock" prefHeight="52.0" prefWidth="200.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="33.0">
+            <children>
+                <Label fx:id="Date" alignment="CENTER" prefHeight="30.0" prefWidth="200.0" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="clock_label1" layoutY="32.0" prefHeight="3.0" prefWidth="200.0" text="                 Day                             Month                                   Year    " textFill="#c2c2c2">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="6.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane id="Clock" fx:id="date" layoutX="448.0" layoutY="35.0" onMouseClicked="#LoadDate" prefHeight="52.0" prefWidth="200.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="33.0">
+            <children>
+                <Label fx:id="Clock_time" alignment="CENTER" layoutX="-6.0" layoutY="-1.0" prefHeight="30.0" prefWidth="200.0" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="clock_label" layoutY="32.0" prefHeight="3.0" prefWidth="200.0" text="            Day                  Hours              Minutes            Seconds" textFill="#c2c2c2">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="6.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+      <Separator focusTraversable="false" layoutX="179.0" layoutY="725.0" prefHeight="0.0" prefWidth="558.0" AnchorPane.bottomAnchor="21.799999999999955" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="163.0" />
+      <JFXHamburger fx:id="admin_burg" alignment="CENTER" layoutX="655.0" layoutY="49.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="51.0" />
+      <JFXDrawer fx:id="admin_drawer" defaultDrawerSize="224.0" layoutY="167.0" prefHeight="416.0" prefWidth="224.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="167.0" />
+    </children>
+    <cursor>
+        <Cursor fx:constant="DEFAULT" />
+    </cursor>
+    <effect>
+        <Blend mode="SOFT_LIGHT" opacity="0.14">
+            <topInput>
+                <BoxBlur iterations="3" />
+            </topInput>
+        </Blend>
+    </effect>
+</AnchorPane>

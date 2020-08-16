@@ -1,0 +1,45 @@
+
+.table-view .column-header-background .label{
+    -fx-text-fill: white;
+    -fx-font-family:SutonnyMJ;
+    -fx-font-size:16;
+}
+
+.table-view .column-header {
+    -fx-background-color: #1515addd;
+
+    -fx-border-color:White;
+    -fx-border-width:0 0 0 .5;
+}
+.table-view .table-cell{
+    -fx-text-fill: Black;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: White;
+    -fx-text-fill:Black;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+.table-view.table-cell
+{
+    -fx-font-family:Calibri;
+}
+#Code.table-cell
+{
+    -fx-background-color:#b2c7b8ab;
+}
+#Quantity.table-cell
+{
+    -fx-background-color:linear-gradient(to right,#85879eab,white,#85879eab);
+}
+#Total.table-cell
+{
+    -fx-background-color:#b2c7b8ab;
+    -fx-text-fill:Black;
+}
+.table-view.table-row
+{
+    -fx-text-fill:Black;
+    -fx-font-family:Calibri;
+}

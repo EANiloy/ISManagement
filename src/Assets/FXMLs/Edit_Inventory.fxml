@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Root_Pane" depthTest="DISABLE" maxHeight="750.0" maxWidth="700.0" prefHeight="750.0" prefWidth="1400.0" stylesheets="@../StyleSheet/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assets.Codes.Edit_Inventory">
+    <children>
+        <AnchorPane id="Title_bar" fx:id="Drag_handle" layoutY="2.0" onMouseDragged="#Drag" onMousePressed="#Pressed" onMouseReleased="#Released" prefHeight="12.0" prefWidth="1011.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox id="hbox_control" alignment="TOP_CENTER" layoutX="915.0" layoutY="5.0" prefHeight="22.0" prefWidth="96.0" spacing="10.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                    <children>
+                        <Circle id="minimize_btn" fx:id="minimize_btn" accessibleRole="BUTTON" fill="DODGERBLUE" onMouseClicked="#Minimize" radius="9.0" stroke="#b5b5b500" strokeType="INSIDE">
+                            <effect>
+                                <GaussianBlur radius="1.5" />
+                            </effect>
+                        </Circle>
+                        <Circle id="maximize_btn" fx:id="maximize_btn" accessibleRole="BUTTON" fill="#5cff1f" onMouseClicked="#Maximize" radius="9.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                            <effect>
+                                <GaussianBlur radius="1.5" />
+                            </effect>
+                        </Circle>
+                        <Circle id="exit_btn" fx:id="exit_btn" accessibleRole="BUTTON" fill="#ff1f1f" onMouseClicked="#Close" radius="9.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                            <effect>
+                                <GaussianBlur radius="1.5" />
+                            </effect>
+                        </Circle>
+                    </children>
+                </HBox>
+                <Label layoutX="8.0" text="Edit Inventory" textFill="WHITE" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font name="Microsoft JhengHei Bold" size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <JFXHamburger id="Hamburger" fx:id="nav_burg" layoutX="647.0" layoutY="28.0" prefHeight="42.0" prefWidth="42.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="14.6" AnchorPane.topAnchor="40.0" />
+        <Pane id="Clock" fx:id="clock" onMouseClicked="#LoadClock" prefHeight="52.0" prefWidth="200.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="33.0">
+            <children>
+                <Label fx:id="Date" alignment="CENTER" prefHeight="30.0" prefWidth="200.0" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="clock_label1" layoutY="32.0" prefHeight="3.0" prefWidth="200.0" text="                 Day                             Month                                   Year    " textFill="#c2c2c2">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="6.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane id="Clock" fx:id="date" layoutX="448.0" layoutY="35.0" onMouseClicked="#LoadDate" prefHeight="52.0" prefWidth="200.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="33.0">
+            <children>
+                <Label fx:id="Clock_time" alignment="CENTER" layoutX="-6.0" layoutY="-1.0" prefHeight="30.0" prefWidth="200.0" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="clock_label" layoutY="32.0" prefHeight="3.0" prefWidth="200.0" text="            Day                  Hours              Minutes            Seconds" textFill="#c2c2c2">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="6.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Separator focusTraversable="false" layoutX="179.0" layoutY="725.0" prefHeight="0.0" prefWidth="558.0" AnchorPane.bottomAnchor="21.799999999999955" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="163.0" />
+        <Pane fx:id="back_btn" layoutX="10.0" layoutY="40.0" onMouseClicked="#Go_back" prefHeight="42.0" prefWidth="42.0">
+            <children>
+                <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/back.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+      <AnchorPane id="Inventory_background" layoutX="8.0" layoutY="114.0" prefHeight="593.0" prefWidth="704.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.bottomAnchor="42.39999999999998" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <JFXTextField fx:id="inv_search" focusColor="#5a7eda" labelFloat="true" layoutX="354.0" layoutY="46.0" onKeyPressed="#Search" prefHeight="26.0" prefWidth="304.0" promptText="Search" unFocusColor="#6b7b8a" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="46.0">
+               <font>
+                  <Font name="Microsoft JhengHei" size="14.0" />
+               </font>
+            </JFXTextField>
+            <TableView id="table_view" fx:id="inv_table" fixedCellSize="0.0" focusTraversable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="594.0" prefWidth="768.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="5.0">
+               <columns>
+                  <TableColumn id="table_column" fx:id="inv_col_pn" editable="false" maxWidth="1000.0" minWidth="400.0" prefWidth="400.0" text="Product Name" />
+                  <TableColumn fx:id="inv_col_ori" editable="false" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Orientation" />
+                  <TableColumn fx:id="inv_col_cat" editable="false" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="200.0" text="Category" />
+                  <TableColumn fx:id="inv_col_stck" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Available Stock" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXComboBox fx:id="comp_combo" layoutX="357.0" layoutY="116.0" onAction="#SetCombo" prefHeight="26.0" prefWidth="304.0" promptText="Please select a company" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="116.0" />
+            <JFXComboBox fx:id="cat_combo" layoutX="357.0" layoutY="167.0" onKeyPressed="#SetCombo" prefHeight="26.0" prefWidth="304.0" promptText="Please select a category" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="167.0" />
+            <JFXButton id="inv_btn" fx:id="inv_btn" alignment="CENTER" buttonType="RAISED" layoutX="466.0" layoutY="210.0" onAction="#Submit" prefHeight="42.0" prefWidth="80.0" ripplerFill="#b2b9cd" stylesheets="@../StyleSheet/Style.css" text="Submit" textFill="#5a7eda" AnchorPane.rightAnchor="134.0" AnchorPane.topAnchor="210.0">
+               <font>
+                  <Font name="Microsoft JhengHei" size="14.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane id="edit_pane" layoutX="354.0" layoutY="260.0" prefHeight="319.0" prefWidth="310.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.bottomAnchor="14.399999999999977" AnchorPane.rightAnchor="15.600000000000023">
+               <children>
+                  <HBox alignment="CENTER" layoutX="-1.0" prefHeight="42.0" prefWidth="310.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="2.0">
+                     <children>
+                        <JFXButton id="inv_btn" fx:id="update_btn" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#Update" prefHeight="100.0" prefWidth="100.0" ripplerFill="#b2b9cd" stylesheets="@../StyleSheet/Style.css" text="Update" textFill="#5a7eda">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton id="inv_btn" fx:id="Delete_btn" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#Delete" prefHeight="100.0" prefWidth="100.0" ripplerFill="#b2b9cd" stylesheets="@../StyleSheet/Style.css" text="Delete" textFill="#5a7eda">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton id="inv_btn" fx:id="chng_btn" alignment="CENTER" buttonType="RAISED" onAction="#Change" prefHeight="100.0" prefWidth="100.0" ripplerFill="#b2b9cd" stylesheets="@../StyleSheet/Style.css" text="Change">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="pn_field" disable="true" editable="false" labelFloat="true" layoutX="13.0" layoutY="66.0" prefHeight="26.0" prefWidth="284.0" promptText="Product Name" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.399999999999977" AnchorPane.topAnchor="66.0">
+                     <font>
+                        <Font name="Microsoft JhengHei" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="ori_field" disable="true" editable="false" labelFloat="true" layoutX="13.0" layoutY="129.0" prefHeight="26.0" prefWidth="284.0" promptText="Orientation" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.399999999999977" AnchorPane.topAnchor="129.0">
+                     <font>
+                        <Font name="Microsoft JhengHei" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="cat_field" disable="true" editable="false" labelFloat="true" layoutX="13.0" layoutY="191.0" prefHeight="26.0" prefWidth="284.0" promptText="Category" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.399999999999977" AnchorPane.topAnchor="191.0">
+                     <font>
+                        <Font name="Microsoft JhengHei" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="stock_field" labelFloat="true" layoutX="13.0" layoutY="251.0" onKeyPressed="#Apply" prefHeight="26.0" prefWidth="284.0" promptText="Add Stock / Change Stock" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.399999999999977" AnchorPane.topAnchor="251.0">
+                     <font>
+                        <Font name="Microsoft JhengHei" size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+        <JFXDrawer id="drawer_pane" fx:id="draw" defaultDrawerSize="200.0" direction="RIGHT" layoutX="460.0" layoutY="70.0" prefHeight="645.0" prefWidth="224.0" resizeContent="true" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+    </children>
+    <effect>
+        <Blend mode="SOFT_LIGHT" opacity="0.14">
+            <topInput>
+                <BoxBlur iterations="3" />
+            </topInput>
+        </Blend>
+    </effect>
+</AnchorPane>

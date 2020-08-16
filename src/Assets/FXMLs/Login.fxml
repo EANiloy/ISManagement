@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Root_Pane" depthTest="DISABLE" maxHeight="750.0" maxWidth="700.0" prefHeight="750.0" prefWidth="700.0" stylesheets="@../StyleSheet/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assets.Codes.Login">
+   <children>
+      <AnchorPane id="login_inside_pane" cacheShape="false" centerShape="false" layoutX="173.0" layoutY="49.0" pickOnBounds="false" prefHeight="674.0" prefWidth="615.0" scaleShape="false" snapToPixel="false" stylesheets="@../StyleSheet/Style.css" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="49.0">
+         <children>
+            <Label fx:id="Login_msg" alignment="CENTER" focusTraversable="false" layoutX="216.0" layoutY="348.0" maxHeight="-Infinity" maxWidth="-Infinity" scaleShape="false" text="Please login to continue" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="216.0" AnchorPane.topAnchor="348.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="14.0" />
+               </font>
+            </Label>
+            <Label id="Lb_Signin" fx:id="Login_Notice" alignment="CENTER" focusTraversable="false" layoutX="240.0" layoutY="217.0" maxHeight="51.0" maxWidth="183.0" minHeight="32.0" minWidth="118.0" pickOnBounds="false" prefHeight="32.0" prefWidth="135.0" stylesheets="@../StyleSheet/Style.css" text="Sign in" textAlignment="CENTER" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="217.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="Login_user" alignment="CENTER" focusColor="BLACK" labelFloat="true" layoutX="177.0" layoutY="413.0" onKeyPressed="#Keypress" pickOnBounds="false" prefHeight="30.0" prefWidth="261.0" promptText="Username" scaleShape="false" unFocusColor="BLACK" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="177.0" AnchorPane.topAnchor="413.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </JFXTextField>
+            <JFXPasswordField fx:id="Login_pass" alignment="CENTER" focusColor="BLACK" labelFloat="true" layoutX="177.0" layoutY="495.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#Keypress" prefHeight="26.0" prefWidth="261.0" promptText="Password" unFocusColor="BLACK" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="177.0" AnchorPane.topAnchor="495.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </JFXPasswordField>
+            <JFXButton id="login_btn" fx:id="Login_btn" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="280.0" layoutY="554.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#Login" pickOnBounds="false" ripplerFill="#444444" scaleShape="false" stylesheets="@../StyleSheet/Style.css" text="Sign in" textFill="WHITE" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="279.223388671875" AnchorPane.topAnchor="554.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Microsoft JhengHei Light" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#747171" />
+               </effect>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+            </JFXButton>
+            <HBox alignment="CENTER" layoutX="247.0" layoutY="269.0" prefHeight="51.0" prefWidth="89.0" AnchorPane.leftAnchor="247.0" AnchorPane.rightAnchor="247.39999999999998" AnchorPane.topAnchor="269.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fx:id="Login_logo" fitHeight="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Login_logo%20-%20Copy.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Separator focusTraversable="false" layoutX="191.0" layoutY="576.0" prefHeight="4.0" prefWidth="330.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="193.0" />
+            <Label alignment="CENTER" layoutX="200.0" layoutY="46.0" prefHeight="51.0" prefWidth="216.0" text="Welcome" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="199.0" AnchorPane.topAnchor="46.0">
+               <font>
+                  <Font name="Microsoft JhengHei" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="282.0" layoutY="97.0" prefHeight="43.0" prefWidth="51.0" text="To" AnchorPane.leftAnchor="282.0" AnchorPane.rightAnchor="282.0">
+               <font>
+                  <Font name="Microsoft JhengHei" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="102.0" layoutY="142.0" text="United Sells and Service Center" AnchorPane.leftAnchor="102.0" AnchorPane.rightAnchor="102.19921875" AnchorPane.topAnchor="142.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <DropShadow height="9.0" radius="7.0" />
+         </effect>
+         </AnchorPane>
+      <AnchorPane id="Title_bar" fx:id="Drag_handle" layoutY="2.0" onMouseDragged="#Drag" onMousePressed="#Pressed" onMouseReleased="#Released" prefHeight="12.0" prefWidth="1011.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox id="hbox_control" alignment="TOP_CENTER" layoutX="915.0" layoutY="5.0" prefHeight="22.0" prefWidth="96.0" spacing="10.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+               <children>
+                  <Circle id="minimize_btn" fx:id="minimize_btn" accessibleHelp="Minimize" accessibleRole="BUTTON" fill="DODGERBLUE" onMouseClicked="#Minimize" radius="9.0" stroke="#b5b5b500" strokeType="INSIDE">
+                     <effect>
+                        <GaussianBlur radius="1.5" />
+                     </effect>
+                  </Circle>
+                  <Circle id="maximize_btn" fx:id="maximize_btn" accessibleHelp="Maximize" accessibleRole="BUTTON" fill="#5cff1f" onMouseClicked="#Maximize" radius="9.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                     <effect>
+                        <GaussianBlur radius="1.5" />
+                     </effect>
+                  </Circle>
+                  <Circle id="exit_btn" fx:id="exit_btn" accessibleHelp="Close" accessibleRole="BUTTON" fill="#ff1f1f" onMouseClicked="#Close" radius="9.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                     <effect>
+                        <GaussianBlur radius="1.5" />
+                     </effect>
+                  </Circle>
+               </children>
+            </HBox>
+            <Label layoutX="8.0" text="User Login" textFill="WHITE" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="3.0">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <effect>
+      <Blend mode="SOFT_LIGHT" opacity="0.14">
+         <topInput>
+            <BoxBlur iterations="3" />
+         </topInput>
+      </Blend>
+   </effect>
+</AnchorPane>

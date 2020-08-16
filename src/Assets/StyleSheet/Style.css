@@ -1,0 +1,200 @@
+#Root_Pane{
+        /*-fx-background-image: url("/Assets/Images/Login_bg.png");*/
+        /*-fx-background-color:rgba(200,230,250,0.95);*/
+        -fx-background-color:linear-gradient(#3c3f41f4,#181e29f5,#182529fa,#142121f5);
+        -fx-background-repeat:no-repeat;
+        -fx-background-size:cover;
+}
+#login_inside_pane{
+        /*-fx-background-color: rgba(204,204,255,1.0);*/
+        -fx-background-color:#c9c9c9;
+        -fx-background-radius : 40px;
+        -fx-opacity:1;
+        /*-fx-text-fill:#411771;*/
+        -fx-text-fill:Black;
+}
+#login_btn{
+        /*-fx-background-color:#411771ff;*/
+        -fx-background-color:#182529;
+        -fx-text-fill:White;
+        -fx-background-radius:5px;
+}
+#login_btn:hover{
+        /*-fx-background-color:#411771b5;*/
+        -fx-background-color:#444444;
+}
+#maximize_btn:hover{
+        -fx-fill:#c0ffa8;
+}
+#minimize_btn:hover{
+        -fx-fill:#9ecfff;
+}
+#exit_btn:hover{
+        -fx-fill:#ffa6a6;
+}
+#Title_bar{
+        -fx-background-color:#3c3f41f4;
+        -fx-bottom-border-radius:5px;
+}
+#Owner_grid{
+        /*-fx-background-color:rgba(204,204,255,1.0);*/
+        -fx-background-color:#c9c9c9;
+        -fx-background-radius:40px;
+}
+#Employee_grid{
+        /*-fx-background-color:rgba(204,204,255,1.0);*/
+        -fx-background-color:#c9c9c9;
+        -fx-background-radius:40px;
+}
+#main_btn:hover{
+        /*-fx-background-color:#4117713f;*/
+        -fx-background-color:#e8e8e8;
+        -fx-background-radius:20px;
+        -fx-text-fill:Black;
+}
+#main_btn:focus {
+        /*-fx-background-color:#4117713f;*/
+        -fx-background-color:White;
+        -fx-background-radius:20px;
+        -fx-text-fill:Black;
+}
+#Splash{
+        /*-fx-background-color:#3773bc;*/
+        -fx-background-color:linear-gradient(from 25% 25% to 100% 100%,#182529,#181e29);
+}
+#Splash_logo{
+        -fx-background-color:White;
+        -fx-background-radius:50px;
+        -fx-padding:5px;
+}
+#Splash_name{
+        -fx-padding:2px;
+}
+#Clock{
+        -fx-background-color:Black;
+        -fx-background-radius:5px;
+}
+#Clock:hover{
+        -fx-text-fill:white;
+        -fx-background-color:#2e2e2e;
+}
+#confrm_lbl{
+        -fx-background-radius:2px;
+        -fx-padding:5px;
+        -fx-text-fill:White;
+}
+#accnt_lbl{
+        -fx-text-fill:White;
+        -fx-background-radius:2px;
+}
+#Inventory_background{
+        /*-fx-background-color:rgba(204,204,255,1.0);*/
+        -fx-background-color:#c9c9c9;
+        -fx-background-radius:5px;
+}
+.jfx-hamburger StackPane{
+        -fx-background-color:White;
+}
+.table-view{
+    -fx-tree-table-color: White;
+    -fx-background-radius:5px;
+}
+.table-view:focused .table-row-cell:hover .table-cell{
+    -fx-text-fill:Black;
+    -fx-background-color: White;
+}
+.table-view:focused .table-row-cell:focused .table-cell{
+     -fx-text-fill:Black;
+      -fx-background-color:White;
+      }
+.table-view:focused {
+    -fx-background-color: White;
+    -fx-background-insets: -1.4, 0, 1;
+    -fx-background-radius: 1.4, 0, 0;
+    -fx-padding: 1;
+    -fx-text-fill:Black;
+}
+
+.table-row-cell > .disclosure-node > .arrow {
+    -fx-padding: 0.333333em 0.229em 0.333333em 0.229em;
+    -fx-shape: "M 0 -3.5 L 4 0 L 0 3.5 z";
+}
+.jfx-radio-button{
+    -jfx-selected-color: #5a7eda;
+    -jfx-unselected-color: #5A5A5A;
+}
+#inv_btn{
+        -fx-text-fill:White;
+        -fx-background-color:#182529;
+}
+#inv_btn:hover{
+        -fx-background-color:#444444;
+        -fx-text-fill:white;
+}
+#msg_lbl{
+        -fx-text-fill:White;
+        -fx-background-radius:2px;
+}
+#drawer_pane{
+-fx-background-color:transparent;
+}
+#drawer{
+ -fx-background-color:#d1d1d1;
+ -fx-text-fill:White;
+}
+
+#drawer_btn{
+        -fx-background-color:#d1d1d1;
+        -fx-text-fill:black;
+}
+#drawer_btn:hover{
+        -fx-background-color:white;
+        -fx-text-fill:black;
+}
+
+.progress-bar > .track{
+    -fx-background-color: rgb(1,40,81);
+}
+
+.progress-bar > .bar,
+.progress-bar:indeterminate > .bar{
+    -fx-background-color: rgb(2,124,165);
+    -fx-padding: .5;
+}
+
+.progress-bar > .secondary-bar,
+.progress-bar:indeterminate > .secondary-bar{
+    -fx-background-color: #ffffff;
+}
+
+.progress-bar > .track,
+.progress-bar > .bar {
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+#Tab{
+-fx-background-color:#c9c9c9;
+        -fx-background-radius:5px;
+
+}
+.tab{
+    -fx-pref-width:350;
+    -fx-pref-height:50;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-insets: 0 0 0 0,0,0;
+}
+.tab-header-background{
+     -fx-background-color:#c9c9c9;
+     -fx-opacity:0;
+}
+.jfx-tab-pane .headers-region > .tab-selected-line{
+    -fx-pref-width: 350px !important;
+    -fx-pref-height: 2px;
+    -fx-border-style:dotted;
+    -fx-background-color:#182529;
+}
+.jfx-slider {
+    -jfx-default-thumb: #182529;
+    -jfx-default-track: #CCCCCC;
+}

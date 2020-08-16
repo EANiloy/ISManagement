@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assets.Codes.ForgotPass">
+   <children>
+      <Label fx:id="reset_label" alignment="CENTER" layoutX="137.0" layoutY="64.0" prefHeight="19.0" prefWidth="125.0" text="Reset Password" AnchorPane.bottomAnchor="218.0" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="138.0" AnchorPane.topAnchor="64.0">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="user_name" alignment="CENTER" labelFloat="true" layoutX="111.0" layoutY="102.0" prefHeight="26.0" prefWidth="174.0" promptText="User Name" />
+      <JFXPasswordField fx:id="password" alignment="CENTER" labelFloat="true" layoutX="112.0" layoutY="157.0" prefHeight="26.0" prefWidth="174.0" promptText="Password" AnchorPane.bottomAnchor="117.6" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="113.60000000000002" AnchorPane.topAnchor="157.0" />
+      <JFXPasswordField fx:id="confrm_password" alignment="CENTER" labelFloat="true" layoutX="113.0" layoutY="206.0" prefHeight="26.0" prefWidth="174.0" promptText="Confirm Password" AnchorPane.bottomAnchor="68.6" AnchorPane.leftAnchor="113.0" AnchorPane.rightAnchor="112.60000000000002" AnchorPane.topAnchor="206.0" />
+      <JFXButton id="main_btn" fx:id="reset_btn" layoutX="177.0" layoutY="254.0" onAction="#Reset" ripplerFill="#595353" stylesheets="@../StyleSheet/Style.css" text="Reset" AnchorPane.bottomAnchor="21.400000000000034" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="177.4" AnchorPane.topAnchor="254.0" />
+      <Label id="confrm_lbl" fx:id="confrm_lbl" alignment="CENTER" layoutX="36.0" layoutY="14.0" prefHeight="44.0" prefWidth="329.0" stylesheets="@../StyleSheet/Style.css" wrapText="true" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Microsoft JhengHei" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

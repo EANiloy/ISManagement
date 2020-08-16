@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Root_Pane" depthTest="DISABLE" maxHeight="750.0" maxWidth="700.0" prefHeight="750.0" prefWidth="900.0" stylesheets="@../StyleSheet/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assets.Codes.Brands">
+    <children>
+        <AnchorPane id="Title_bar" fx:id="Drag_handle" layoutY="2.0" onMouseDragged="#Drag" onMousePressed="#Pressed" onMouseReleased="#Released" prefHeight="12.0" prefWidth="1011.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox id="hbox_control" alignment="TOP_CENTER" layoutX="915.0" layoutY="5.0" prefHeight="22.0" prefWidth="96.0" spacing="10.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                    <children>
+                        <Circle id="minimize_btn" fx:id="minimize_btn" accessibleRole="BUTTON" fill="DODGERBLUE" onMouseClicked="#Minimize" radius="9.0" stroke="#b5b5b500" strokeType="INSIDE">
+                            <effect>
+                                <GaussianBlur radius="1.5" />
+                            </effect>
+                        </Circle>
+                        <Circle id="maximize_btn" fx:id="maximize_btn" accessibleRole="BUTTON" fill="#5cff1f" onMouseClicked="#Maximize" radius="9.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                            <effect>
+                                <GaussianBlur radius="1.5" />
+                            </effect>
+                        </Circle>
+                        <Circle id="exit_btn" fx:id="exit_btn" accessibleRole="BUTTON" fill="#ff1f1f" onMouseClicked="#Close" radius="9.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                            <effect>
+                                <GaussianBlur radius="1.5" />
+                            </effect>
+                        </Circle>
+                    </children>
+                </HBox>
+                <Label layoutX="8.0" text="Brands" textFill="WHITE" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="3.0">
+                    <font>
+                        <Font name="Microsoft JhengHei Bold" size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <JFXHamburger id="Hamburger" fx:id="nav_burg" layoutX="643.0" layoutY="40.0" prefHeight="42.0" prefWidth="42.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="14.600000000000023" AnchorPane.topAnchor="40.0" />
+        <Pane id="Clock" fx:id="clock" onMouseClicked="#LoadClock" prefHeight="52.0" prefWidth="200.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="33.0">
+            <children>
+                <Label fx:id="Date" alignment="CENTER" prefHeight="30.0" prefWidth="200.0" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="clock_label1" layoutY="32.0" prefHeight="3.0" prefWidth="200.0" text="                 Day                             Month                                   Year    " textFill="#c2c2c2">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="6.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane id="Clock" fx:id="date" layoutX="448.0" layoutY="35.0" onMouseClicked="#LoadDate" prefHeight="52.0" prefWidth="200.0" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="33.0">
+            <children>
+                <Label fx:id="Clock_time" alignment="CENTER" layoutX="-6.0" layoutY="-1.0" prefHeight="30.0" prefWidth="200.0" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="clock_label" layoutY="32.0" prefHeight="3.0" prefWidth="200.0" text="            Day                  Hours              Minutes            Seconds" textFill="#c2c2c2">
+                    <font>
+                        <Font name="Microsoft JhengHei" size="6.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Separator focusTraversable="false" layoutX="179.0" layoutY="725.0" prefHeight="0.0" prefWidth="558.0" AnchorPane.bottomAnchor="21.799999999999955" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="163.0" />
+        <Pane fx:id="back_btn" layoutX="10.0" layoutY="40.0" onMouseClicked="#Go_back" prefHeight="42.0" prefWidth="42.0">
+            <children>
+                <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/back.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+      <GridPane id="Owner_grid" alignment="TOP_CENTER" hgap="2.0" layoutX="146.0" layoutY="158.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="471.0" prefWidth="200.0" stylesheets="@../StyleSheet/Style.css" vgap="2.0" AnchorPane.bottomAnchor="121.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="158.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton id="main_btn" fx:id="Ali_btn" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#Check_Inventory" prefHeight="110.0" prefWidth="180.0" ripplerFill="#8f8888" stylesheets="@../StyleSheet/Style.css" text="alibaba" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="160.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Alibaba.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="bravo_btn" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#Check_Inventory" prefHeight="110.0" prefWidth="180.0" ripplerFill="#8f8888" stylesheets="@../StyleSheet/Style.css" text="bravo" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Bravo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="npoly_btn" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#Check_Inventory" prefHeight="110.0" prefWidth="180.0" ripplerFill="#8f8888" stylesheets="@../StyleSheet/Style.css" text="npoly" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="160.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../Images/NPOLY.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="rfl_btn" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#Check_Inventory" prefHeight="110.0" prefWidth="180.0" ripplerFill="#8f8888" stylesheets="@../StyleSheet/Style.css" text="rfl" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="160.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../Images/RFL.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="partex_btn" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#Check_Inventory" prefHeight="110.0" prefWidth="180.0" ripplerFill="#8f8888" stylesheets="@../StyleSheet/Style.css" text="partex" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Partex.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="star_btn" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#Check_Inventory" prefHeight="110.0" prefWidth="180.0" ripplerFill="#8f8888" stylesheets="@../StyleSheet/Style.css" text="star" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Star.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton id="main_btn" fx:id="union_btn" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#Check_Inventory" prefHeight="110.0" prefWidth="180.0" ripplerFill="#8f8888" stylesheets="@../StyleSheet/Style.css" text="upoly" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="160.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../Images/Union_polymer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </GridPane>
+        <JFXDrawer id="drawer_pane" fx:id="draw" defaultDrawerSize="200.0" direction="RIGHT" layoutX="460.0" layoutY="70.0" prefHeight="645.0" prefWidth="224.0" resizeContent="true" stylesheets="@../StyleSheet/Style.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+    </children>
+    <effect>
+        <Blend mode="SOFT_LIGHT" opacity="0.14">
+            <topInput>
+                <BoxBlur iterations="3" />
+            </topInput>
+        </Blend>
+    </effect>
+</AnchorPane>
